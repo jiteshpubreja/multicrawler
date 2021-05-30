@@ -1,0 +1,50 @@
+{% extends 'base.html' %} 
+{% block content %}
+<form action="/single-crawl" method="POST">
+  <div class="container">
+    <div class="d-flex align-content-md-center">
+
+      <div class="form-group mb-2 col-md-2">
+        <!-- <label for="inputPassword2" class="sr-only"></label> -->
+        <input
+          required
+          name="link"
+          type="input"
+          class="form-control"
+          value="{{link}}"
+          placeholder="Link"
+        />
+      </div>
+      <div
+        class="dropdown show mb-2 col-md-5"
+        style="padding-left: 1px; padding-right: 15px"
+      >
+        <select required name="choose" class="selectpicker form-control">
+          {% for o in web_links %}
+          <option class="dropdown-item" value="{{ o }}">{{ o }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="submit" class="btn btn-outline-primary mb-2 col-md-2" onclick="myFunction()">
+        Crawl
+      </button>
+    </div>
+  </div>
+</form>
+<div class="row" style="justify-content: space-around">
+
+  <div class="card border-primary col-md-6">
+    <div class="card-header">{{primary_lang}}</div>
+    <div class="card-body" style="overflow: scroll; height: 500px">
+      {% for item in data.split('\n') %}
+      <p class="card-text">{{item}}</p>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<script>
+  function myFunction() {
+    alert('Please do not close the browser.. wait for the results  ')
+  }
+</script>
+{% endblock content %}

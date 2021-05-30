@@ -34,6 +34,7 @@ app.config.update(
 
 
 
+
 # Crawler's Route Function
 @app.route('/crawler', methods=['GET', 'POST'])
 def crawler_fucroute():

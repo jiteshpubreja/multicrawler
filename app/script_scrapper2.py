@@ -2,7 +2,7 @@
 from bs4 import BeautifulSoup
 import requests
 import os
-from cleaner import tokenizer
+from .cleaner import tokenizer
 from langdetect import detect
 
 # finding provided user defined environment as .env file and load it

@@ -57,7 +57,7 @@ def crawler_fucroute():
         web_links = crawl_links(link)
         
         # return render_template('input.html', link='link', web_links=web_links, pa_out=pa_out.split('\n'), en_out=en_out)
-        return render_template('crawler.html', link='Link', web_links=web_links, secondary_out=lang_tags, primary_out=lang_tags, primary_langs = lang_tags, secondary_langs = lang_tags,primary_lang = primary_lang,secondary_lang=secondary_lang)
+        return render_template('crawler.html', link='Link', web_links=web_links, secondary_out=secondary_out, primary_out=primary_out, primary_langs = lang_tags, secondary_langs = lang_tags,primary_lang = primary_lang,secondary_lang=secondary_lang)
     return render_template('crawler.html', link='Link', secondary_langs = lang_tags, primary_langs = lang_tags, secondary_out='', primary_out='', web_links=['none'],primary_lang=primary_lang,secondary_lang=secondary_lang)
 
 

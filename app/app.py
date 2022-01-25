@@ -1,8 +1,8 @@
 from flask.templating import render_template
-from .cleaner import clean_en_pa
+from cleaner import clean_en_pa
 from nltk import sent_tokenize
-from .crawler import singleCrawl, Crawl
-from .script_scrapper2 import crawler, crawl_links
+from crawler import singleCrawl, Crawl
+from script_scrapper2 import crawler, crawl_links
 from dotenv import find_dotenv, load_dotenv
 import os
 import sqlite3

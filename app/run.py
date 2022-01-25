@@ -1,5 +1,5 @@
 from app import app
 
 if __name__ == "__main__":
-    app.run(host="localhost", debug=True, port="1007")
+    app.run(host="localhost", debug=True, port="1008")
     # app.run(debug=True)

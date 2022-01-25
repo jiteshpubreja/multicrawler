@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  multicrawler:
+    build: ./app
+    command: gunicorn --bind 0.0.0.0:1008 run:app
+    restart: always
+    volumes:
+      - ./app:/app
+    environment:
+      - APP_NAME=multicrawler
+      - FLASK_APP=app.py
+      - FLASK_ENV=production
+
+    ports:
+      - 1008:1008
